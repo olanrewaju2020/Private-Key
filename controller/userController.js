@@ -1,7 +1,6 @@
+const {User} =require('../models/userModel')
 module.exports = {
-    welcome: (req, res, next) => {
-        res.render('welcome')
-    },
+    
 
     secure: (req, res, next) => {
         res.render('secure')
