@@ -9,9 +9,8 @@ exports.User = connection.define('user', {
         allowNull: false,
         primaryKey: true
     },
-    keystore: { type: Sequelize.STRING, allowNull: false },
-    secure: { type: Sequelize.STRING, allowNull: false },
-    privatekey: { type: Sequelize.STRING, allowNull: false },
+    userName: { type: Sequelize.STRING, allowNull: false },
+    password: { type: Sequelize.STRING, allowNull: false },
 
 
 });
@@ -24,7 +23,5 @@ exports.Usertoken = connection.define('usertoken', {
         primaryKey: true
     },
     userToken: { type: Sequelize.STRING, allowNull: false },
-
-
 
 });
