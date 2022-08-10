@@ -23,5 +23,7 @@ exports.Usertoken = connection.define('usertoken', {
         primaryKey: true
     },
     userToken: { type: Sequelize.STRING, allowNull: false },
+    type: { type: Sequelize.STRING, allowNull: false },
+
 
 });
