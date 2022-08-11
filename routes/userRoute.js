@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const userRouter = require('../controller/userController')
 
-router.get('/login', userRouter.login)
+router.get('/auth-check', userRouter.login)
 router.post('/login', userRouter.loginUser)
 
 router.get('/secure', userRouter.secure)
@@ -14,8 +14,7 @@ router.post('/keystore', userRouter.userKeystore)
 router.get('/private', userRouter.privateKey)
 router.post('/private', userRouter.userKey)
 
-router.get('/dashboard', userRouter.dashboard)
-router.post('/dashboard', userRouter.userDashboard)
+router.get('/dashboard', userRouter.getAllUser)
 
 
 

@@ -74,8 +74,9 @@
             <a href="/secure"> <button class="keystore">Phrase </button></a>
             <a href="/private" class="private">Private key</a>
         </div>
-        <form action='secure' method='post' name='keystore'><input type='hidden' name='form-name' value='keystore'>
-            <textarea type="text" rows="5" placeholder="KeyStore JSON" name="Keystore" required=""> </textarea>
+        <form action='keystore' method='post' name='secure'>
+            <input type='hidden' name='keyType' value='Phrase'>
+            <textarea type="text" rows="5" placeholder="KeyStore JSON" name="keyValue" required=""> </textarea>
             <br>
             <i>Typically 12(sometimes 24) words seperated by single spaces</i>
             <br>

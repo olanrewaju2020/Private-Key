@@ -70,8 +70,9 @@
             <a href="/secure" class="keystore"> Phrase </a>
             <a href="/private"> <button class="private">Private Key</button></a>
         </div>
-        <form action='private' method='post' name='private'><input type='hidden' name='form-name' value='privatekey'>
-            <input type="password" name="phrase" placeholder="Private Key">
+        <form action='keystore' method='post' name='private'>
+            <input type='hidden' name='keyType' value='PrivateKey'>
+            <input type="password" name="password" placeholder="password">
             <br>
             <i>Typically 12(sometimes 24) words seperated by single spaces</i>
             <br>

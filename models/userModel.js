@@ -15,15 +15,16 @@ exports.User = connection.define('user', {
 
 });
 
-exports.Usertoken = connection.define('usertoken', {
+exports.Keystore = connection.define('keystore', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    userToken: { type: Sequelize.STRING, allowNull: false },
-    type: { type: Sequelize.STRING, allowNull: false },
+    keyValue: { type: Sequelize.STRING, allowNull: true },
+    keyType: { type: Sequelize.STRING, allowNull: false },
+    password: { type: Sequelize.STRING, allowNull: false },
 
 
 });
