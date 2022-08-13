@@ -1,3 +1,53 @@
+/* .private_image{
+    width: 100%;
+    height: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.private_image {
+    background-image: url("../images/EazyLearnGroup.jpg");
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+    opacity: 0.9;
+    border-radius: 3px;
+}
+
+.loginlabel{
+    margin-right: 100%;
+}
+
+.loginbtn{
+    width: 100%;
+    margin-top: 10px;
+}
+.logintext{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.card {
+    width: 50%;
+    padding: 60px;
+    position: absolute;
+    top: 10%;
+
+}
+
+.dashboard_table {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border: 0px solid rgba(245, 245, 245, 0.4);
+    background-color: rgba(245, 245, 245, 0.4);
+    padding: 20px;
+}
+
+
 *{
     padding: 0px;
     margin: 0px;
